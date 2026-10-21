@@ -8,8 +8,8 @@ cd learning-log
 code .
 上传文件到Git
 git add .
-git commit -m "day01: 猜数字游戏"
-git push
+git commit -m "修改的内容"
+git push origin main
 - 写了什么代码：猜数字
 - 卡在哪：两个变量弄混了，并且不知道random有什么用，str+,
 - 明天做什么：
