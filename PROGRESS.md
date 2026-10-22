@@ -25,12 +25,12 @@
 
 ---
 
-## Day 1 还差（未完成 → 明天用 10 分钟热身补）
+## Day 1（已完成 2026-10-22）
 
-- [ ] 输入 `abc` 不崩溃：给 `int(input(...))` 加 `try/except ValueError`
-- [ ] 亲手输入 `abc`，把报错抄到日志里
-- [ ] 回答 day01 的 3 个问题，写进 `day01/README.md`
-- [ ] 提交并推送剩余改动（README 已在暂存区；`PROGRESS.md`、`plan/` 还未提交）
+- [x] 输入 `abc` 不崩溃：`try/except ValueError` 已加
+- [x] 记录 `abc` 的报错（`day01/README.md`）
+- [x] 回答 day01 的 3 个问题（`day01/README.md`）
+- [ ] 提交并推送 Day 1 收尾改动
 
 ---
 

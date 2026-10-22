@@ -6,7 +6,12 @@ tries = 0#计数
 print("我想了一个 1-100 的数字。")
 
 while True:#开始游戏
-    guess = int(input("猜一个数字："))
+    try:
+        guess = int(input("猜一个数字："))
+    except ValueError:
+        print("请输入一个有效的数字。")
+        continue
+
     tries += 1
 
     # 在这里补全：
