@@ -1,6 +1,6 @@
 # 学习进度（每次学习结束前更新）
 
-> 最后更新：2026-10-22
+> 最后更新：2026-10-22 晚（Day 2 已完成）
 > 这份文件是给「下一次对话」看的。即使聊天记录丢了，也能从这里继续。
 
 ---
@@ -8,81 +8,50 @@
 ## 当前位置
 
 - 阶段：0 · 方向体验（10/22 – 11/1）
-- 天数：第 2 天 / 11 天
+- 进度：Day 1、Day 2 已完成；下一次是 Day 3
 - 计划文件：`plan/03-第一阶段-方向体验.md`
 
 ---
 
-## Day 2 进度（进行中）
+## 已完成
 
-- [x] `day02/sample.txt`
-- [x] `day02/word_count.py`：`read_text` / `count_words` / `top_n`
-- [x] 词频前 10 验证通过
-- [x] 文件不存在时打印提示、不崩溃
-- [ ] LeetCode Two Sum
-- [ ] LeetCode Valid Parentheses
-- [ ] 提交并推送 `day02/`
-
----
-
-## 已经完成
-
-- [x] 环境确认（python / git / code）
-- [x] 仓库 clone 到 `E:\learning-log`
-- [x] `day01/guess_number.py` 基本逻辑：大了 / 小了 / 猜对 + break
-- [x] 第一次 commit + push（`c0ba67f`）
-- [x] 学习计划复制进 `plan/`（29 个文件）
-- [x] 本地提交 `87914ed day01: 猜数字游戏`（**还没 push**）
+- [x] Day 1：猜数字 + `try/except` + 3 个问答
+- [x] Day 2：单词统计 `day02/word_count.py`（读文件 / 词频 / 前 10 / 文件不存在提示）
+- [x] LeetCode Two Sum：暴力 O(n²) + 字典 O(n)，两版都通过
+- [x] LeetCode Valid Parentheses：栈实现，5 个测试全部通过
+- [x] 两题题解：`leetcode/notes.md`
+- [x] Day 2 全部内容已提交并推送（含 `leetcode/`）
 
 ---
 
-## Day 1（已完成 2026-10-22）
+## 下次开始：Day 3 · 10/24（Git 分支与回滚）
 
-- [x] 输入 `abc` 不崩溃：`try/except ValueError` 已加
-- [x] 记录 `abc` 的报错（`day01/README.md`）
-- [x] 回答 day01 的 3 个问题（`day01/README.md`）
-- [ ] 提交并推送 Day 1 收尾改动
+> 开始前先读这份文件，再跑 `git status` / `git log --oneline`。
+
+参考：`plan/练习/day03-Git分支与回滚.md`
+
+- [ ] 新建分支 `practice-git`
+- [ ] 修改一个文件并提交
+- [ ] 切回 `main`，合并分支
+- [ ] 故意改坏文件，用 `git restore` 恢复
+- [ ] 故意提交一个错误，用 `git revert` 撤销
+- [ ] 写 `git-notes.md`，回答 4 个问题：
+  - `add` 和 `commit` 的区别？
+  - `branch` 是什么？
+  - `merge` 做了什么？
+  - `revert` 和 `reset` 的区别？
+- [ ] LeetCode（时间够再做）：Merge Two Sorted Lists、Best Time to Buy and Sell Stock
 
 ---
 
-## 已知薄弱点（后面几天补）
+## 已知薄弱点（后面补）
 
-1. 变量分不清：`answer` / `guess` / `tries` 各自是什么
-2. 不知道 `random` 有什么用
-3. 字符串拼接：`str +` 与 f-string
-4. 异常处理：`int()` 转换失败会抛 `ValueError`
-
----
-
-## 下次开始：Day 2 · 2026-10-23（周五）
-
-> 开始前先读这份文件，再跑一次 `git status`。
-
-### 0. 热身 10 分钟：Day 1 收尾
-- [ ] 给 `int(input(...))` 加 `try / except ValueError`，输入 `abc` 不崩溃
-- [ ] 把 `abc` 的报错抄进 `README.md` 日志
-- [ ] 写 `day01/README.md`，回答 3 个问题（while 何时结束 / int 为什么报错 / 不用 break 会怎样）
-
-### 1. 30 分钟：学
-- 看 `plan/学习笔记/01-Python基础.md` 的「函数」「文件」「异常」三节
-- 重点：`def`、`return`、`with open()`、`try/except`
-
-### 2. 50 分钟：写单词统计
-- 新建 `day02/word_count.py`
-- 读 `day02/sample.txt`，统计词频，打印前 10
-- 逻辑拆成函数；文件不存在时给提示、不崩溃
-
-### 3. 30 分钟：LeetCode
-- Two Sum（easy）
-- Valid Parentheses（easy）
-- 每题写 3 行：思路、复杂度、易错点
-
-### 4. 10 分钟：提交 + 日志
-```bash
-git add .
-git commit -m "day02: 单词统计 + 两道 LeetCode"
-git push origin main
-```
+1. 变量作用域：局部变量 vs 全局变量
+2. `return` vs `print`；没有 `return` 会得到 `None`
+3. 字典读写：`counts[word]`、`in`、`+=`
+4. 异常：`ValueError` / `FileNotFoundError`
+5. 缩进和相对路径（在哪个目录运行命令）
+6. 栈操作：`append` / `pop` / `stack[-1]`
 
 ---
 
@@ -90,5 +59,5 @@ git push origin main
 
 1. 先读这份文件
 2. 跑 `git status` / `git log --oneline` 确认真实状态
-3. 从「今天还差」第一条开始，一次只做一步
-4. 每完成一项，回来把 `[ ]` 改成 `[x]`
+3. 从「下次开始」第一条做起，一次只做一步
+4. 每完成一项，把 `[ ]` 改成 `[x]`
