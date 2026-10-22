@@ -8,9 +8,20 @@
 ## 当前位置
 
 - 阶段：0 · 方向体验（10/22 – 11/1）
-- 天数：第 1 天 / 11 天
-- 今日日期：2026-10-22
+- 天数：第 2 天 / 11 天
 - 计划文件：`plan/03-第一阶段-方向体验.md`
+
+---
+
+## Day 2 进度（进行中）
+
+- [x] `day02/sample.txt`
+- [x] `day02/word_count.py`：`read_text` / `count_words` / `top_n`
+- [x] 词频前 10 验证通过
+- [x] 文件不存在时打印提示、不崩溃
+- [ ] LeetCode Two Sum
+- [ ] LeetCode Valid Parentheses
+- [ ] 提交并推送 `day02/`
 
 ---
 
