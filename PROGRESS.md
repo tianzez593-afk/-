@@ -1,6 +1,6 @@
 # 学习进度（每次学习结束前更新）
 
-> 最后更新：2026-10-22 晚
+> 最后更新：2026-10-23 晚
 > 这份文件是给「下一次对话」看的。即使聊天记录丢了，也能从这里继续。
 
 ---
@@ -8,7 +8,7 @@
 ## 当前位置
 
 - 阶段：0 · 方向体验（10/22 – 11/1）
-- 进度：Day 1、Day 2 已完成；明天先自己重写 Valid Parentheses，再进入 Day 3
+- 进度：Day 1、Day 2、Day 3 已完成；下一次是 Day 4（复盘 + 重写）
 - 计划文件：`plan/03-第一阶段-方向体验.md`
 
 ---
@@ -16,44 +16,36 @@
 ## 已完成
 
 - [x] Day 1：猜数字 + `try/except` + 3 个问答
-- [x] Day 2：单词统计 `day02/word_count.py`（读文件 / 词频 / 前 10 / 文件不存在提示）
-- [x] LeetCode Two Sum：暴力 O(n²) + 字典 O(n)，两版都通过
-- [x] Valid Parentheses：已实现并提交（`10675e1`）——**明天不看答案自己重写**
-- [x] 两题题解：`leetcode/notes.md`
-- [x] Day 2 已推送到 GitHub
+- [x] Day 2：单词统计 + Two Sum + Valid Parentheses（自己重写）
+- [x] Day 3：Git 分支与回滚
+  - 新建 `practice-git` 分支
+  - 分支上提交、切回 `main`、`git merge`（Fast-forward）
+  - `git restore` 撤销未提交修改
+  - `git revert` 撤销已提交的错误
+  - `git-notes.md` 回答 4 个问题
 
 ---
 
-## 下次开始（明天）
+## 下次开始：Day 4 · 复盘 + 重写
 
-### 0. 先自己写 Valid Parentheses（约 20 分钟）
+> 开始前先读这份文件，再跑 `git status` / `git log --oneline`。
 
-- `leetcode/valid_parentheses.py` 已恢复成 **TODO 骨架**（这个改动还没提交）
-- [ ] **不看** `leetcode/notes.md`，**不看** git 历史，自己补完 TODO
-- [ ] 运行 `python leetcode/valid_parentheses.py`，期望：`True True False False True`
-- [ ] 写完后对比答案：`git show 10675e1:leetcode/valid_parentheses.py`
-- [ ] 提交：
+参考：`plan/03-第一阶段-方向体验.md` 的「第 4 天」
+
+- [ ] 60 分钟：从零重写下面之一（**不看昨天的代码**）
+  - 猜数字游戏
+  - 单词统计
+- [ ] 30 分钟：读代码（如果 `E:\LMS` 在）
+  - 找到 `config/urls.py`，挑一个 URL
+  - 顺着找到 `views.py` 里的函数
+  - 写下：`URL → 哪个函数 → 做了什么 → 用到哪个模板/服务`
+- [ ] 20 分钟：填 `plan/08-能力自评与复盘.md` 的第一次自评
+- [ ] 10 分钟：提交
   ```bash
   git add .
-  git commit -m "day02: 自己重写 Valid Parentheses"
+  git commit -m "day04: 复盘 + 重写"
   git push origin main
   ```
-
-### 1. 然后进入 Day 3 · Git 分支与回滚
-
-参考：`plan/练习/day03-Git分支与回滚.md`
-
-- [ ] 新建分支 `practice-git`
-- [ ] 修改一个文件并提交
-- [ ] 切回 `main`，合并分支
-- [ ] 故意改坏文件，用 `git restore` 恢复
-- [ ] 故意提交一个错误，用 `git revert` 撤销
-- [ ] 写 `git-notes.md`，回答 4 个问题：
-  - `add` 和 `commit` 的区别？
-  - `branch` 是什么？
-  - `merge` 做了什么？
-  - `revert` 和 `reset` 的区别？
-- [ ] LeetCode（时间够再做）：Merge Two Sorted Lists、Best Time to Buy and Sell Stock
 
 ---
 
@@ -65,6 +57,7 @@
 4. 异常：`ValueError` / `FileNotFoundError`
 5. 缩进和相对路径（在哪个目录运行命令）
 6. 栈操作：`append` / `pop` / `stack[-1]`
+7. Git：merge 的方向、`revert` vs `reset`、`add` vs `commit`
 
 ---
 

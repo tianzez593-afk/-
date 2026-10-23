@@ -81,8 +81,8 @@ git push origin main
 ### 今天任务
 
 - [x] 不看答案，自己重写 Valid Parentheses
-- [ ] Day 3：Git 分支与回滚
-- [ ] 写 `git-notes.md`
+- [x] Day 3：Git 分支与回滚
+- [x] 写 `git-notes.md`
 
 ### 卡点记录（边做边记）
 
@@ -98,17 +98,33 @@ git push origin main
    → `key` 是排序依据，`x[1]` 表示按次数排
 5. `main()` 和 `if __name__ == "__main__"` 不懂
    → 意思是「只有直接运行这个文件时才执行 main()」
+6. 切回 `main` 后，分支上的文件不见了
+   → 文件还在 `practice-git` 的提交里，切回分支就能看到
+7. 不理解 merge 的方向
+   → 在哪个分支上执行，就是把别的分支合进「当前分支」
+8. `revert` 和 `reset` 分不清
+   → `revert` 新增提交抵消旧提交（安全）；`reset` 移动指针、改写历史（危险）
+9. `add` 和 `commit` 的区别
+   → `add` 放进暂存区，`commit` 才真正存档
 
 ### 今天学了
 
 - 栈：`append` / `pop` / `stack[-1]`
 - `sorted` 的 `key` 参数和 `lambda`
 - `main()` 与 `if __name__ == "__main__"`
+- Git 分支：`switch -c` / `merge`（Fast-forward）
+- `git restore`：撤销未提交的修改
+- `git revert`：新增提交，抵消已提交的修改
 
 ### 写了什么代码
 
 - `leetcode/valid_parentheses.py`：不看答案自己重写，5 个测试通过
+- `day03/branch_practice.txt`：分支练习文件
+- `git-notes.md`：4 个 Git 问题的回答
 
 ### 明天做什么
 
-- 
+- Day 4：复盘 + 重写
+- 选猜数字或单词统计，从零重写一遍
+- 读 `E:\LMS` 的一个 URL → views 调用链（如果环境在）
+- 填 `plan/08-能力自评与复盘.md` 的第一次自评
