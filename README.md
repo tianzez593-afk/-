@@ -75,3 +75,40 @@ git push origin main
 - Day 3：Git 分支与回滚（`plan/练习/day03-Git分支与回滚.md`）
 - 新建分支、提交、合并、`restore`、`revert`
 - LeetCode：Merge Two Sorted Lists、Best Time to Buy and Sell Stock
+
+## 2026-10-23
+
+### 今天任务
+
+- [x] 不看答案，自己重写 Valid Parentheses
+- [ ] Day 3：Git 分支与回滚
+- [ ] 写 `git-notes.md`
+
+### 卡点记录（边做边记）
+
+> 格式：想做什么 → 现象/报错 → 试过什么 → 怎么解决的。
+
+1. 不知道「入栈」是什么意思
+   → 搞清了 `append`（入栈）/ `pop`（出栈）/ `stack[-1]`（看栈顶）
+2. 右括号比较对象写错：用了 `ch != stack[-1]`
+   → 应该用 `pairs[ch] != stack[-1]`
+3. 匹配成功后写了 `return stack[-1]`
+   → 应该用 `stack.pop()`，继续循环而不是结束函数
+4. `key=lambda x: x[1]` 不懂
+   → `key` 是排序依据，`x[1]` 表示按次数排
+5. `main()` 和 `if __name__ == "__main__"` 不懂
+   → 意思是「只有直接运行这个文件时才执行 main()」
+
+### 今天学了
+
+- 栈：`append` / `pop` / `stack[-1]`
+- `sorted` 的 `key` 参数和 `lambda`
+- `main()` 与 `if __name__ == "__main__"`
+
+### 写了什么代码
+
+- `leetcode/valid_parentheses.py`：不看答案自己重写，5 个测试通过
+
+### 明天做什么
+
+- 

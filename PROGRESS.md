@@ -1,6 +1,6 @@
 # 学习进度（每次学习结束前更新）
 
-> 最后更新：2026-10-22 晚（Day 2 已完成）
+> 最后更新：2026-10-22 晚
 > 这份文件是给「下一次对话」看的。即使聊天记录丢了，也能从这里继续。
 
 ---
@@ -8,7 +8,7 @@
 ## 当前位置
 
 - 阶段：0 · 方向体验（10/22 – 11/1）
-- 进度：Day 1、Day 2 已完成；下一次是 Day 3
+- 进度：Day 1、Day 2 已完成；明天先自己重写 Valid Parentheses，再进入 Day 3
 - 计划文件：`plan/03-第一阶段-方向体验.md`
 
 ---
@@ -18,15 +18,28 @@
 - [x] Day 1：猜数字 + `try/except` + 3 个问答
 - [x] Day 2：单词统计 `day02/word_count.py`（读文件 / 词频 / 前 10 / 文件不存在提示）
 - [x] LeetCode Two Sum：暴力 O(n²) + 字典 O(n)，两版都通过
-- [x] LeetCode Valid Parentheses：栈实现，5 个测试全部通过
+- [x] Valid Parentheses：已实现并提交（`10675e1`）——**明天不看答案自己重写**
 - [x] 两题题解：`leetcode/notes.md`
-- [x] Day 2 全部内容已提交并推送（含 `leetcode/`）
+- [x] Day 2 已推送到 GitHub
 
 ---
 
-## 下次开始：Day 3 · 10/24（Git 分支与回滚）
+## 下次开始（明天）
 
-> 开始前先读这份文件，再跑 `git status` / `git log --oneline`。
+### 0. 先自己写 Valid Parentheses（约 20 分钟）
+
+- `leetcode/valid_parentheses.py` 已恢复成 **TODO 骨架**（这个改动还没提交）
+- [ ] **不看** `leetcode/notes.md`，**不看** git 历史，自己补完 TODO
+- [ ] 运行 `python leetcode/valid_parentheses.py`，期望：`True True False False True`
+- [ ] 写完后对比答案：`git show 10675e1:leetcode/valid_parentheses.py`
+- [ ] 提交：
+  ```bash
+  git add .
+  git commit -m "day02: 自己重写 Valid Parentheses"
+  git push origin main
+  ```
+
+### 1. 然后进入 Day 3 · Git 分支与回滚
 
 参考：`plan/练习/day03-Git分支与回滚.md`
 

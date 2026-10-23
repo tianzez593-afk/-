@@ -4,13 +4,20 @@ def is_valid(s):
 
     for ch in s:
         if ch in "([{":
-            stack.append(ch)
+            # TODO: 左括号入栈
+          stack.append(ch)
         else:
-            if not stack:
+            # TODO: 栈空 → return False
+            # TODO: 栈顶和 ch 不匹配 → return False
+            # TODO: 匹配 → 弹出栈顶
+            if len(stack)==0:
                 return False
-            if stack[-1] != pairs[ch]:
+            elif pairs[ch] !=stack[-1]:
                 return False
-            stack.pop()
+            else :
+                stack.pop()
+
+    
 
     return len(stack) == 0
 
