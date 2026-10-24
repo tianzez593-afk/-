@@ -128,3 +128,42 @@ git push origin main
 - 选猜数字或单词统计，从零重写一遍
 - 读 `E:\LMS` 的一个 URL → views 调用链（如果环境在）
 - 填 `plan/08-能力自评与复盘.md` 的第一次自评
+
+## 2026-10-24
+
+### 今天任务
+
+- [x] 不看答案，从零重写单词统计
+- [x] 读 `E:\LMS` 的 `/student/` 调用链
+- [x] 填第一次能力自评
+
+### 卡点记录（边做边记）
+
+1. 变量太多、名字太像，脑子绕不过来
+   → 把 `content` 改成 `path`、`count` 改成 `counts`、`i/h` 改成 `word/n`
+2. `count[word] in count` 报 `KeyError`
+   → 应该先判断 `word in counts`，再取值
+3. 字典没有 `.sorted()` 方法
+   → 用内置 `sorted(counts.items(), key=lambda x: x[1], reverse=True)`
+4. `main()` 里没有真正读文件和统计
+   → 按 `path → read_text → count_words → top_n → print` 的顺序补齐
+5. 路由有四个 `include(..., "")`，不知道网址归哪个文件
+   → 用 `Ctrl + Shift + F` 搜路径字符串，或从 `config/urls.py` 顺着 `include` 找
+
+### 今天学了
+
+- 从零重写：不看原代码，凭记忆写出 word_count
+- Django 调用链：URL → `urls.py` → `views.py` → 模板
+- 用 `Ctrl + Shift + F` / `Ctrl + P` / `F12` 在项目里定位代码
+
+### 写了什么代码
+
+- `day04/word_count.py`：从零重写单词统计，输出前 10
+- `day04/code_reading.md`：`/student/` 的调用链笔记
+- `plan/08-能力自评与复盘.md`：更新第一次能力自评
+
+### 明天做什么
+
+- Day 5：实验 A · 自动化脚本
+- 二选一：批量重命名文件 / CSV 统计
+- 记录 5 行感受：哪步顺手、哪步烦、还想做什么
