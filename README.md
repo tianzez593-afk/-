@@ -167,3 +167,38 @@ git push origin main
 - Day 5：实验 A · 自动化脚本
 - 二选一：批量重命名文件 / CSV 统计
 - 记录 5 行感受：哪步顺手、哪步烦、还想做什么
+
+## 2026-10-26
+
+### 今天任务
+
+- [x] 实验 A · CSV 统计
+
+### 卡点记录（边做边记）
+
+1. `csv.DictReader` 是什么
+   → 把 CSV 第一行当表头，每行变成字典，用 `row["语文"]` 取值
+2. `averages[subject] = total / len(rows)` 不理解
+   → 先累加该科总分，再除以人数，存进字典
+3. `DictWriter` / `writeheader()` / `writerows()` 不熟
+   → `DictWriter` 按 `fieldnames` 写字典行；`writeheader()` 写表头；`writerows()` 写全部行
+
+### 今天学了
+
+- `csv.DictReader`：CSV → 字典列表
+- `csv.DictWriter`：字典列表 → CSV
+- CSV 里的数字读出来是字符串，计算前要 `int()`
+- 读写 CSV 时 `open(..., newline="")`
+
+### 写了什么代码
+
+- `taste/automation/scores.csv`：测试数据
+- `taste/automation/csv_stats.py`：读 CSV、算总分和平均分、写 `result.csv`
+- `taste/automation/result.csv`：计算结果
+- `taste/automation/notes.md`：5 行实验感受
+
+### 明天做什么
+
+- Day 6：实验 B · 小网页（Flask）
+- 安装 Flask，跑一个表单页
+- 记录 2 个感受：看到网页有没有成就感、更想改样式还是逻辑
