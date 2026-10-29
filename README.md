@@ -235,3 +235,42 @@ git push origin main
 - Day 6：实验 B · 小网页（Flask）
 - 安装 Flask，跑一个表单页
 - LeetCode 继续保持每天 30 分钟，并记录题号
+
+## 2026-10-29
+
+> 今日投入：约 20 分钟（Flask 代码 23:00–23:04，另有安装与调试）
+
+### 今天任务
+
+- [x] 实验 B · Flask 小网页
+
+### 卡点记录（边做边记）
+
+1. `<from>` 拼错，点提交没反应
+   → 应该是 `<form action="/hello">`
+2. 结束标签写成 `<h1>`，少了斜杠
+   → 应该是 `</h1>`
+3. `name="name"placeholder` 之间少了空格
+   → 补上空格
+
+### 今天学了
+
+- Flask：`Flask(__name__)`、`@app.route`
+- 表单：`<form action="/hello">`
+- `request.args.get("name", "陌生人")` 取网址参数
+- `app.run(debug=True)` 改代码自动重载
+
+### 写了什么代码
+
+- `taste/web/app.py`：首页表单 + `/hello` 页面
+- `taste/web/notes.md`：2 个实验感受
+
+### LeetCode
+
+- 学校题目，混合方式（已记在 10/27–10/29 补记）
+
+### 明天做什么
+
+- Day 7：实验 C · 假 Agent（`taste/agent/mock_agent.py`）
+- 手写 Agent 循环 + 加一个 `calculator` 工具
+- LeetCode 每天 30 分钟，记到 `leetcode/log.md`
